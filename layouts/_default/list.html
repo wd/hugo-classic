@@ -5,7 +5,9 @@
 <h1>{{ .Title }}</h1>
 {{ end }}
 
+{{ if not $pag.HasPrev }}
 {{ .Content }}
+{{ end }}
 
 <ul>
   {{ range (where $pag.Pages "Section" "ne" "") }}
