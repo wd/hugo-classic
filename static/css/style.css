@@ -93,11 +93,11 @@ pre {
 code { background: #f9f9f9; }
 
 main code {
-  background: gainsboro;
-  border: 1px solid oldlace;
+  background: #f9f2f4;
   font-family: "Monaco", "Andale Mono", "lucida console", "Courier New", monospace;
   font-size: 0.9em;
-  padding: 1px 3px;
+  padding: 2px 4px;
+  color: #c7254e;
   margin: 0 3px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
