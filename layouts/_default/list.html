@@ -1,4 +1,5 @@
 {{ partial "header.html" . }}
+{{ $pag := $.Paginator }}
 
 {{if not .IsHome }}
 <h1>{{ .Title }}</h1>
@@ -7,12 +8,25 @@
 {{ .Content }}
 
 <ul>
-  {{ range (where .Data.Pages "Section" "!=" "") }}
+  {{ range (where $pag.Pages "Section" "ne" "") }}
   <li>
     <span class="date">{{ .Date.Format "2006/01/02" }}</span>
-    <a href="{{ .URL }}">{{ .Title }}</a>
+    <a href="{{ .URL }}">{{ .Title }}</a> (<a style="color: gray;" href="{{ .URL }}#disqus_thread">Comments</a>)
   </li>
   {{ end }}
 </ul>
 
+{{ if gt $pag.TotalPages 1 }}
+  <nav id="pagenavi">
+    {{ if $pag.HasPrev }}
+        <a href="{{ $pag.Prev.URL }}" class="prev">Prev</a>
+    {{ end }}
+    {{ if $pag.HasNext }}
+        <a style="float:right" href="{{ $pag.Next.URL }}" class="next">Next</a>
+    {{ end }}
+  </nav>
+  <div style="clear:both"></div>
+{{ end }}
+
+{{ partial "disqus.html" (dict "shortname" $.Site.Params.theme.disqus_shortname "index" true) }}
 {{ partial "footer.html" . }}

@@ -91,6 +91,21 @@ pre {
   overflow-x: auto;
 }
 code { background: #f9f9f9; }
+
+main code {
+  background: gainsboro;
+  border: 1px solid oldlace;
+  font-family: "Monaco", "Andale Mono", "lucida console", "Courier New", monospace;
+  font-size: 0.9em;
+  padding: 1px 3px;
+  margin: 0 3px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+
+
 pre code { background: none; }
 
 /* Images, tables, misc. */

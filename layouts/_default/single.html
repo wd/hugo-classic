@@ -20,4 +20,13 @@
 {{ .Content }}
 </main>
 
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
+{{ partial "disqus.html" (dict "shortname" $.Site.Params.theme.disqus_shortname "index" false) }}
+
 {{ partial "footer.html" . }}
