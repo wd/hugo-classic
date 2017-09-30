@@ -19,12 +19,13 @@
 </ul>
 
 {{ if gt $pag.TotalPages 1 }}
-  <nav id="pagenavi">
+  <nav id="pagenavi" style="width:100%; text-align:center;">
     {{ if $pag.HasPrev }}
-        <a href="{{ $pag.Prev.URL }}" class="prev">Prev</a>
+    <div style="float:left"><a href="{{ $pag.Prev.URL }}" class="prev">Prev</a></div>
     {{ end }}
+    <div style="display:inline-block">{{ $pag.PageNumber}} of {{ $pag.TotalPages }}</div>
     {{ if $pag.HasNext }}
-        <a style="float:right" href="{{ $pag.Next.URL }}" class="next">Next</a>
+    <div style="float:right"><a href="{{ $pag.Next.URL }}" class="next">Next</a></div>
     {{ end }}
   </nav>
   <div style="clear:both"></div>
