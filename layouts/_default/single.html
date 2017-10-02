@@ -12,8 +12,8 @@
 </p>
 </div>
 
-{{ if .Params.toc }}
-{{ .TableOfContents }}
+{{ if gt .WordCount 400 }}
+{{ partial "toc.html" . }}
 {{ end }}
 
 <main>

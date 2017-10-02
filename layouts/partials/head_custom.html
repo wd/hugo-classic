@@ -4,8 +4,14 @@
   Syntax highlighting - defaults to atom light theme.
   List here: https://github.com/isagalaev/highlight.js/tree/master/src/styles
   -->
+  <!--
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  -->
+
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/hljs.css">
+  <script src="{{ .Site.BaseURL }}/js/hljs.js"></script>
+
   <script>hljs.initHighlightingOnLoad();</script>
   <nav>
     <ul>
