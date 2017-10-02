@@ -44,7 +44,23 @@ output:
   border-radius: 5px;
 }
 
-.terms { font-size: .9em; }
+.terms {
+    font-size: .9em;
+}
+
+ul.terms {
+    list-style-type: none;
+}
+
+.terms li {
+    float: left;
+    margin-right: 0.5em;
+}
+
+.tagcount {
+    color: #bbb;
+}
+
 .menu, .article-meta, footer { text-align: center; }
 .title { font-size: 1.1em; }
 footer a { text-decoration: none; }
@@ -101,7 +117,6 @@ pre {
   border: 1px solid #ddd;
   box-shadow: 5px 5px 5px #eee;
   background: #f8f8f8;
-  padding: 1em;
   overflow-x: auto;
 }
 code { background: #f9f9f9; }
@@ -139,3 +154,4 @@ table {
 table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
 tr:nth-child(even) { background: #eee }
+

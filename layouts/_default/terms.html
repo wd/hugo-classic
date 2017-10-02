@@ -1,14 +1,10 @@
 {{ partial "header.html" . }}
 
 <h1>{{ .Title }}</h1>
-
 <ul class="terms">
   {{ range $key, $value := .Data.Terms }}
   <li>
-    <a href="{{ (print "/" $.Data.Plural "/" $key) | relURL }}">
-      {{ $key }}
-    </a>
-    ({{ len $value }})
+      <a href="{{ (print "/" $.Data.Plural "/" $key) | relURL }}">{{ $key }}</a><sup class="tagcount">{{ len $value }}</sup>
   </li>
   {{ end }}
 </ul>
