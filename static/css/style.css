@@ -3,6 +3,16 @@ body {
   margin: auto;
   padding: .2em;
   line-height: 1.5em;
+
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@media(max-width: 800px) {
+    body {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
 }
 
 /* Table of Contents, if wanted
