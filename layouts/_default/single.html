@@ -20,12 +20,14 @@
 {{ .Content }}
 </main>
 
+{{ if ne $.Params.comment false }}
 <section id="comment">
     <h2 class="title">Comments</h2>
     <div id="disqus_thread" aria-live="polite">
         <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 </section>
+{{ end }}
 
 {{ partial "disqus.html" (dict "shortname" $.Site.Params.disqus_shortname "index" false) }}
 
