@@ -13,7 +13,7 @@
   {{ range (where $pag.Pages "Section" "ne" "") }}
   <li>
     <span class="date">{{ .Date.Format "2006/01/02" }}</span>
-    <a href="{{ .URL }}">{{ .Title }}</a> (<a style="color: gray;" href="{{ .URL }}#disqus_thread">Comments</a>)
+    <a href="{{ .Permalink }}">{{ .Title }}</a> (<a style="color: gray;" href="{{ .Permalink }}#disqus_thread">Comments</a>)
   </li>
   {{ end }}
 </ul>
