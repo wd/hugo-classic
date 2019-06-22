@@ -126,9 +126,10 @@ header .current a {
 pre {
   border: 1px solid #ddd;
   box-shadow: 5px 5px 5px #eee;
-  background: #f8f8f8;
+  background: #f8f8f8 !important;
   overflow-x: auto;
 }
+
 code { background: #f9f9f9; }
 
 main code {
