@@ -123,11 +123,12 @@ header .current a {
 }
 
 /* Code Boxes */
-pre {
+table pre {
   border: 1px solid #ddd;
   box-shadow: 5px 5px 5px #eee;
   background: #f8f8f8 !important;
   overflow-x: auto;
+  padding-left: 4px;
 }
 
 code { background: #f9f9f9; }
@@ -136,9 +137,7 @@ main code {
   background: #f9f2f4;
   font-family: "Monaco", "Andale Mono", "lucida console", "Courier New", monospace;
   font-size: 0.9em;
-  padding: 2px 4px;
   color: #c7254e;
-  margin: 0 3px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
